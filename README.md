@@ -14,3 +14,9 @@ The visualization will focus on the mainline Pokemon series from Generation I to
 
 ## Goal: We want to find out patterns in how fans have responded to each generation’s starter Pokemon. Our aim is to discover which Pokemon players choose as their starter in each generation and make a case for how Pokemon’s design choices may influence fans’ preferences.
 
+## Project Structure
+The project contains the following main files:
+- **'index.html'**
+- **'style.css'**
+- **'main.js'**
+- **'README.md'**
