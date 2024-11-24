@@ -3,4 +3,312 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
+    display: flex; 
 }
+
+.sidebar {
+    width: 20%; /* Adjust the width as needed */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #d16533; /* Orange color */
+  }
+
+  .main-content {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    position: relative;
+    background-color: #feeaea;
+  }
+
+ /* Define CSS variables for Poké Ball size */
+:root {
+    --poke-ball-size: 500px; /* Adjust this value to make the Poké Ball bigger */
+    --center-circle-size: calc(var(--poke-ball-size) / 4); /* Center circle is 1/4 of the Poké Ball */
+    --inner-circle-size: calc(var(--center-circle-size) / 2.5); /* Inner circle is smaller */
+    --border-width: calc(var(--poke-ball-size) / 20); /* Border width scales proportionally */
+  }
+  
+  /* Poké Ball container */
+  .poke-ball {
+    width: var(--poke-ball-size);
+    height: var(--poke-ball-size);
+    position: absolute;
+    top: 50%;
+    right: calc(var(--poke-ball-size) / -1.8); /* Moves half of the Poké Ball outside the right edge */
+    transform: translateY(-50%);
+    border-radius: 50%; /* Makes it a circle */
+    overflow: hidden;
+    border: var(--border-width) solid #232323; /* Border scales proportionally */
+  }
+  
+  /* Top half of the Poké Ball */
+  .top-half {
+    width: 100%;
+    height: 50%;
+    background-color: #d16533; /* Orange color */
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Bottom half of the Poké Ball */
+  .bottom-half {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* Middle black line */
+  .middle-line {
+    width: 100%;
+    height: calc(var(--border-width) * 1.8); /* Line thickness scales with border size */
+    background-color: #232323;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Outer circle at the center */
+  .center-circle {
+    width: var(--center-circle-size);
+    height: var(--center-circle-size);
+    background-color: white;
+    border-radius: 50%;
+    border: var(--border-width) solid #232323;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+/* Single Arrow Styling */
+
+.arrow-1 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 20%;
+    right: 140px;
+  }
+  /* Arrowhead (diamond shape) */
+  .arrow-1:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -50%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-2 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 25%;
+    right: 140px;
+  }
+  .arrow-2:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -55%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-3 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 30%;
+    right: 140px;
+  }
+  .arrow-3:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -60%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+
+  .arrow-4 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 35%;
+    right: 140px;
+  }
+  .arrow-4:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -65%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-5 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 40%;
+    right: 140px;
+  }
+  .arrow-5:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -70%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-6 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 45%;
+    right: 140px;
+  }
+  .arrow-6:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -75%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-7 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 50%;
+    right: 140px;
+  }
+  .arrow-7:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -80%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-8 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 55%;
+    right: 140px;
+  }
+  .arrow-8:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -85%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-9 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 60%;
+    right: 140px;
+  }
+  .arrow-9:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -90%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-10 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 65%;
+    right: 140px;
+  }
+  .arrow-10:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -95%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+
+  .arrow-11 {
+    position: absolute;
+    width: 180px; /* Length of the arrow */
+    height: 10px; /* Thickness of the arrow line */
+    background-color: #232323; /* Arrow color */
+    top: 65%;
+    right: 140px;
+  }
+  .arrow-11:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #232323;
+    transform: rotate(45deg); /* Make it a diamond shape */
+    top: -100%; /* Center vertically on the arrow */
+    right: 170px; /* Align at the left end of the arrow line */
+    transform-origin: center;
+  }
+  
+  
+  
+  
