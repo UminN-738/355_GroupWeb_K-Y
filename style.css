@@ -514,9 +514,9 @@ body {
   border: 15px solid #d97746; /* Border color matching the design */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Space inside the box */
-  margin: 50px; /* Space outside the box */
+  margin: 50px ; /* Space outside the box */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  width: 50%; /* Adjust width as needed */
+  width: clamp(300px, 50%, 800px);
   left: 150px;
 }
 
