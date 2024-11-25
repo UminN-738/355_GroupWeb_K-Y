@@ -315,7 +315,7 @@ body {
   top: -75%;
   /* Center vertically on the arrow */
   right: 170px;
-  /* Align at the left end of the arrow line */
+  /* Align at the left end of the arrow line  */
   transform-origin: center;
 }
 
