@@ -435,7 +435,7 @@ body {
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
-  top: 65%;
+  top: 70%;
   right: 140px;
 }
 
@@ -448,6 +448,33 @@ body {
   transform: rotate(45deg);
   /* Make it a diamond shape */
   top: -100%;
+  /* Center vertically on the arrow */
+  right: 170px;
+  /* Align at the left end of the arrow line */
+  transform-origin: center;
+}
+
+.arrow-12 {
+  position: absolute;
+  width: 180px;
+  /* Length of the arrow */
+  height: 10px;
+  /* Thickness of the arrow line */
+  background-color: #232323;
+  /* Arrow color */
+  top: 75%;
+  right: 140px;
+}
+
+.arrow-12:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #232323;
+  transform: rotate(45deg);
+  /* Make it a diamond shape */
+  top: -105%;
   /* Center vertically on the arrow */
   right: 170px;
   /* Align at the left end of the arrow line */
