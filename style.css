@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: #F8FCEB;
   margin: 0;
   padding: 0;
   display: flex;
@@ -458,8 +458,8 @@ body {
   position: absolute;
   bottom: 20px; /* Adjust spacing as needed */
   right: 20px; /* Adjust spacing as needed */
-  width: 220px; /* Set the width of the images */
-  height: 200px; /* Set the height of the images */
+  width: 420px; /* Set the width of the images */
+  height: 400px; /* Set the height of the images */
   background-size: cover;
   background-repeat: repeat;
   animation: frameAnimation 1s steps(2) infinite;
@@ -467,6 +467,66 @@ body {
 
 @keyframes frameAnimation {
   0% { background-image: url('assets/ani-1.png'); }
-  50% { background-image: url('assets/ani-2.png'); }
-  100% { background-image: url('assets/ani-1.png'); }
+  100% { background-image: url('assets/ani-2.png'); }
+}
+
+.gif-container {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+.animated-gif {
+  width: 600px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.intro-box {
+  position: relative;
+  background-color: #fefae0; /* Light background color */
+  border: 15px solid #d97746; /* Border color matching the design */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Space inside the box */
+  margin: 50px; /* Space outside the box */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  width: 50%; /* Adjust width as needed */
+  left: 150px;
+}
+
+.intro-box h2 {
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #333;
+  font-size: 40px;
+}
+
+.intro-box p {
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  
+}
+
+.intro-box ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.intro-box ul li {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #555;
+}
+
+.intro-box ul .p2 {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 80%; 
+  margin-bottom: 20px; 
+  
 }
