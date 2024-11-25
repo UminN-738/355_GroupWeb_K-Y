@@ -453,3 +453,20 @@ body {
   /* Align at the left end of the arrow line */
   transform-origin: center;
 }
+
+.animated-image {
+  position: absolute;
+  bottom: 20px; /* Adjust spacing as needed */
+  right: 20px; /* Adjust spacing as needed */
+  width: 220px; /* Set the width of the images */
+  height: 200px; /* Set the height of the images */
+  background-size: cover;
+  background-repeat: repeat;
+  animation: frameAnimation 1s steps(2) infinite;
+}
+
+@keyframes frameAnimation {
+  0% { background-image: url('assets/ani-1.png'); }
+  50% { background-image: url('assets/ani-2.png'); }
+  100% { background-image: url('assets/ani-1.png'); }
+}
