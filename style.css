@@ -171,9 +171,9 @@ body {
 
 .arrow-button  {
   position: absolute;
-  top: calc(14% + var(--index) * 3vw);
-  right: 40vh;
-  padding: 8px 15px;
+  top: calc(-115% + var(--index) * 0.01vw);
+  right: 24vh;
+  padding: 6px 15px;
   background-color: #232323;
   /* Default background same as sidebar */
   color: white;
