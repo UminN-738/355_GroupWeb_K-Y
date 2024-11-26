@@ -147,10 +147,11 @@ body {
   z-index: 2;
 }
 
+
 /* Base styles for arrows */
 .arrow {
   position: absolute;
-  width: 12vw;
+  width: 10rem;
   height: 8px;
   background-color: #232323; /* Arrow color */
   top: calc(15.5% + var(--index) * 3vw);
