@@ -169,6 +169,20 @@ body {
   right: 170px;
 }
 
+.arrow-button {
+  position: relative;
+  margin-right: 10px; /* Space between the button and the arrow */
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #007BFF; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  top: calc(20% + var(--index) * 5%);
+  right: -150px;
+}
+
 
 
 .animated-image {
