@@ -171,14 +171,14 @@ body {
 
 .arrow-button  {
   position: absolute;
-  top: calc(14% + var(--index) * 3.01vw);
+  top: calc(14% + var(--index) * 3vw);
   right: 40vh;
   padding: 8px 15px;
   background-color: #232323;
   /* Default background same as sidebar */
   color: white;
   /* Default text color */
-  border-radius: 5px;
+  border-radius: 10px;
   /* Rounded corners */
   font-size: 14px;
   font-weight: bold;
