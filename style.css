@@ -153,7 +153,7 @@ body {
   width: 180px;
   height: 8px;
   background-color: #232323; /* Arrow color */
-  top: calc(20% + var(--index) * 5%);
+  top: calc(20% + var(--index) * 5.3%);
   right: 140px;
 }
 
