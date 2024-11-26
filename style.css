@@ -150,7 +150,7 @@ body {
 /* Base styles for arrows */
 .arrow {
   position: absolute;
-  width: 180px;
+  width: 12vw;
   height: 8px;
   background-color: #232323; /* Arrow color */
   top: calc(20% + var(--index) * 3vw);
