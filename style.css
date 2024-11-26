@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  overflow-x: hidden; 
 }
 
 .main-content {
@@ -74,24 +75,16 @@ body {
   /* Border matches hover text color */
 }
 
-#home-button {
-  background-color: white;
-  /* Default active background for "home" */
-  color: #d16533;
-  /* Default active text color for "home" */
-}
-
-
 /* Pokeball */
 :root {
   --poke-ball-size: 500px;
-  /* Adjust this value to make the Poké Ball bigger */
+
   --center-circle-size: calc(var(--poke-ball-size) / 4);
-  /* Center circle is 1/4 of the Poké Ball */
+
   --inner-circle-size: calc(var(--center-circle-size) / 2.5);
-  /* Inner circle is smaller */
+
   --border-width: calc(var(--poke-ball-size) / 20);
-  /* Border width scales proportionally */
+
 }
 
 /* Poké Ball container */
@@ -159,7 +152,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -187,7 +180,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -214,7 +207,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -242,7 +235,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -269,7 +262,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -296,7 +289,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -323,7 +316,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -350,7 +343,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -377,7 +370,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -404,7 +397,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -431,7 +424,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -458,7 +451,7 @@ body {
   position: absolute;
   width: 180px;
   /* Length of the arrow */
-  height: 10px;
+  height: 8px;
   /* Thickness of the arrow line */
   background-color: #232323;
   /* Arrow color */
@@ -513,11 +506,12 @@ body {
   background-color: #fefae0; /* Light background color */
   border: 15px solid #d97746; /* Border color matching the design */
   border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Space inside the box */
-  margin: 50px ; /* Space outside the box */
+  padding: 10px; /* Space inside the box */
+  margin: 5px ; /* Space outside the box */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-  width: clamp(300px, 50%, 800px);
+  width: clamp(30px, 50%, 60vw);
   left: 150px;
+  height:auto
 }
 
 .intro-box h2 {
@@ -531,7 +525,7 @@ body {
 .intro-box p {
   font-size: 2vw;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 3vw;
   color: #333;
   
 }
