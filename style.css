@@ -153,7 +153,7 @@ body {
   width: 12vw;
   height: 8px;
   background-color: #232323; /* Arrow color */
-  top: calc(20% + var(--index) * 2.95vw);
+  top: calc(15.5% + var(--index) * 3vw);
   right: 9vw;
 }
 
@@ -171,7 +171,7 @@ body {
 
 .arrow-button  {
   position: absolute;
-  top: calc(18% + var(--index) * 3.01vw);
+  top: calc(14% + var(--index) * 3.01vw);
   right: 340px;
   padding: 8px 15px;
   text-decoration: none;
