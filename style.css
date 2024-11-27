@@ -147,18 +147,17 @@ body {
   z-index: 2;
 }
 
-
 /* Base styles for arrows */
 .arrow {
   position: absolute;
-  width: 10rem;
-  height: 8px;
+  width: 12rem;
+  height: 0.5rem;
   background-color: #232323; /* Arrow color */
-  top: calc(15.5% + var(--index) * 3vw);
+  top: calc(8vw + var(--index) * 3vw);
   right: 16vh;
 }
 
-/* Arrowhead */
+/* Arrowhead
 .arrow::before {
   content: '';
   position: absolute;
@@ -168,13 +167,13 @@ body {
   transform: rotate(45deg);
   top: -50%;
   right: 23vh;
-}
+} */
 
 .arrow-button  {
   position: absolute;
-  top: calc(-115% + var(--index) * 0.01vw);
-  right: 24vh;
-  padding: 6px 15px;
+  top: calc(-0.7vw + var(--index) * 0.01vw);
+  right: 23vh;
+  padding: 6px 30px;
   background-color: #232323;
   /* Default background same as sidebar */
   color: white;
@@ -197,6 +196,7 @@ body {
   border-color: #232323;
   /* Border matches hover text color */
 }
+
 
 
 
