@@ -150,11 +150,15 @@ body {
 /* Base styles for arrows */
 .arrow {
   position: absolute;
-  width: 12rem;
+  width: 18rem;
   height: 0.5rem;
   background-color: #232323; /* Arrow color */
-  top: calc(8vw + var(--index) * 3vw);
+  top: calc(10vw + var(--index) * 2.9vw);
   right: 16vh;
+  left: 55vw;
+  display: inline-block;
+  max-width: 500px; /* Limit the maximum length of the arrow */
+  transition: width 0.3s ease; /* Smooth transition when resizing */
 }
 
 /* Arrowhead
@@ -182,7 +186,7 @@ body {
 .arrow-button  {
   position: absolute;
   top: calc(-0.7vw + var(--index) * 0.01vw);
-  right: 23vh;
+  right: 30vh;
   padding: 6px 30px;
 
   background-color: #232323;
