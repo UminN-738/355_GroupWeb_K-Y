@@ -169,11 +169,22 @@ body {
   right: 23vh;
 } */
 
+.arrow-button::before {
+  content: "";
+  position: absolute;
+  left: -60px; /* Extend clickable range to the left */
+  right: -60px; /* Extend clickable range to the right */
+  top: 0;
+  bottom: 0;
+  z-index: -1; /* Keeps it behind the button visually */
+}
+
 .arrow-button  {
   position: absolute;
   top: calc(-0.7vw + var(--index) * 0.01vw);
   right: 23vh;
   padding: 6px 30px;
+
   background-color: #232323;
   /* Default background same as sidebar */
   color: white;
