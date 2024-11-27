@@ -131,3 +131,4 @@ document.querySelectorAll(".arrow-button").forEach((button, index) => {
         popupBox.style.left = `${rect.left - popupBox.offsetWidth - 10}px`;
     });
 });
+
