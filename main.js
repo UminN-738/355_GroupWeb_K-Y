@@ -12,11 +12,15 @@ document.querySelector(".sidebar h1").addEventListener("click", function () {
 // Keep track of the currently active button
 let activeButton = null;
 
+
+
+
 // Define the content for each button
 const buttonContent = {
     0: {
         image: "path/to/image1.jpg",
         text: "This is the content for Button 1."
+
     },
     1: {
         image: "path/to/image2.jpg",
@@ -129,6 +133,33 @@ document.querySelectorAll(".arrow-button").forEach((button, index) => {
         popupBox.style.position = "absolute";
         popupBox.style.top = `${rect.top}px`;
         popupBox.style.left = `${rect.left - popupBox.offsetWidth - 10}px`;
+
+
     });
 });
 
+async function render() {
+    const data = await d3.csv("starter_pokemon_rankings_with_evolution (1).csv");
+    const vlSpec1 = vl
+        .markBar()
+        .data(data)
+        .encode(
+            vl.x().fieldO("evolution_stage").title("Evolution Stage"),
+            vl.y().fieldO("ranking").title("Ranking").sort("ascending"),
+            vl.color().fieldN("type").title("Type").scale({
+                domain: ["Water", "Grass", "Fire"],
+                range: ["#1f77b4", "#2ca02c", "#d62728"],
+            }),
+            vl.column().fieldN("region").title("Region")
+        )
+        .width(100)
+        .height(600)
+        .toSpec();
+
+    await vegaEmbed("#view1", vlSpec1); // Ensure #view1 exists in visualization.html
+}
+
+
+document.querySelector(".arrow-button[style='--index: 0;']").addEventListener("click", () => {
+    render();
+});

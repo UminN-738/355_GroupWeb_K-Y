@@ -5,8 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IAT355 Final Project</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+  const options = {
+     config: {
+       // Vega-Lite default configuration
+     },
+     init: (view) => {
+       // initialize tooltip handler
+       view.tooltip(new vegaTooltip.Handler().call);
+     },
+     view: {
+       // view constructor options
+       // remove the loader if you don't want to default to vega-datasets!
+       loader: vega.loader({
+         baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+       }),
+       renderer: "canvas",
+     },
+   };
+
+   // register vega and vega-lite with the API
+   vl.register(vega, vegaLite, options);
+   </script>
+
 
 <body>
 
@@ -22,7 +52,8 @@
   <div class="main-content">
   
     <div class="arrow" style="--index: 0;">
-      <button class="arrow-button" style="--index: 0;">visuals</button> 
+      <button class="arrow-button" style="--index: 0;">visuals
+      </button> 
     </div>
     <div class="arrow" style="--index: 1;">
       <button class="arrow-button" style="--index: 1;">name1</button> 
@@ -58,6 +89,7 @@
       <button class="arrow-button" style="--index: 11;">name1</button>  
     </div>
 
+    <div id="view1"></div>
 
     <!-- Poké Ball -->
     <div class="poke-ball">
