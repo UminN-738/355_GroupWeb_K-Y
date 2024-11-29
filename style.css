@@ -1,10 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #F8FCEB;
+  background-color: #ffc772;
   margin: 0;
   padding: 0;
   display: flex;
   overflow-x: hidden; 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .main-content {
@@ -22,9 +26,9 @@ body {
 .sidebar {
   width: 20%;
   /* Adjust the width as needed */
-  height: 100vh;
+  height: auto;
   /* Full height of the viewport */
-  background-color: #d16533;
+  background-color: #FFAF61;
   /* Orange color */
   padding: 20px;
   box-sizing: border-box;

@@ -131,8 +131,6 @@ document.querySelectorAll(".arrow-button").forEach((button, index) => {
         popupBox.style.position = "absolute";
         popupBox.style.top = `${rect.top}px`;
         popupBox.style.left = `${rect.left - popupBox.offsetWidth - 10}px`;
-
-
     });
 });
 
