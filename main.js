@@ -1,12 +1,12 @@
 // Add event listener for the Pokemon title
 document.querySelector(".sidebar h1").addEventListener("click", function () {
     // Redirect to the front page (index.html)
-    window.location.href = "home.html"; // Replace with your front page file
+    window.location.href = "index.html"; // Replace with your front page file
 });
 // Add event listener for the Pokemon title
 document.querySelector(".sidebar h1").addEventListener("click", function () {
     // Redirect to the front page (index.html)
-    window.location.href = "home.html"; // Replace with your front page file
+    window.location.href = "index.html"; // Replace with your front page file
 });
 
 // Keep track of the currently active button
@@ -18,12 +18,11 @@ let activeButton = null;
 // Define the content for each button
 const buttonContent = {
     0: {
-        image: "path/to/image1.jpg",
-        text: "This is the content for Button 1."
+        text: "This is the description about vis 1."
 
     },
     1: {
-        image: "path/to/image2.jpg",
+        // image: "path/to/image2.jpg",
         text: "This is the content for Button 2."
     },
     2: {
@@ -124,7 +123,6 @@ document.querySelectorAll(".arrow-button").forEach((button, index) => {
         // Set the content of the popup box
         const content = buttonContent[index];
         popupBox.innerHTML = `
-            <img src="${content.image}" alt="Popup Image" style="width:100px; height:auto; margin-bottom:10px;">
             <p>${content.text}</p>
         `;
 
@@ -147,18 +145,18 @@ async function render() {
 
     const vlSpec1 = vl
     
-        .markBar()
+        .markPoint()
         .data(pokemonData2)
         
         .encode(
-            vl.x().fieldO("evolution_stage").title("Evolution Stage"),
-            vl.y().fieldO("ranking").title("Ranking").sort("ascending"),
+            vl.x().fieldO("evolution_stage").title("evolution_stage"),                    
+            vl.y().fieldQ("ranking").title("Ranking").sort("descending"), // Ranking on y-axis
             vl.color().fieldN("type").title("Type").scale({
-                domain: ["Water", "Grass", "Fire"],
-                range: ["#1f77b4", "#2ca02c", "#d62728"],
+              domain: ["Water", "Grass", "Fire"],
+              range: ["#1f77b4", "#2ca02c", "#d62728"]   
             }),
             vl.column().fieldN("region").title("Region")
-        )
+          )
         .width(60)
         .height(400)
         .toSpec();
