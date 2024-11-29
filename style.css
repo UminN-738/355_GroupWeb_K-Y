@@ -318,3 +318,46 @@ body {
   color: #333;
   margin: 0;
 }
+
+main {
+  padding: 2rem;
+  display: grid;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section {
+  background: white;
+  margin:2rem 0;
+  padding: 1rem;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+footer{
+  text-align: center;
+  padding: 2rem;
+  background-color: #2b6ca3;
+  color:white;
+}
+
+svg {
+  border: solid lightgrey;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+#view1,#view2,#view3, #view4, #view5 {
+  width: 80%;
+  height: 50%;
+  max-width: 200px;
+
+  position: absolute;
+  top: 1vw; /* Distance from the top */
+  left: 5px; /* Distance from the left */
+}

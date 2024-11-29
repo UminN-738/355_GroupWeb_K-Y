@@ -139,10 +139,17 @@ document.querySelectorAll(".arrow-button").forEach((button, index) => {
 });
 
 async function render() {
-    const data = await d3.csv("starter_pokemon_rankings_with_evolution (1).csv");
+    const data = await d3.csv("assets/starter_pokemon_rankings_with_evolution (1).csv");
+
+    const pokemonData2 = data.filter(
+        d => d.evolution_stage === "Base" && d.region !== "Overall"
+    );
+
     const vlSpec1 = vl
+    
         .markBar()
-        .data(data)
+        .data(pokemonData2)
+        
         .encode(
             vl.x().fieldO("evolution_stage").title("Evolution Stage"),
             vl.y().fieldO("ranking").title("Ranking").sort("ascending"),
@@ -152,14 +159,13 @@ async function render() {
             }),
             vl.column().fieldN("region").title("Region")
         )
-        .width(100)
-        .height(600)
+        .width(60)
+        .height(400)
         .toSpec();
-
     await vegaEmbed("#view1", vlSpec1); // Ensure #view1 exists in visualization.html
 }
 
-
+//render();
 document.querySelector(".arrow-button[style='--index: 0;']").addEventListener("click", () => {
     render();
 });
