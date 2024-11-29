@@ -4,12 +4,32 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+.page {
+  scroll-snap-type: y mandatory; /* Enable vertical snapping */
+  overflow-y: scroll; /* Allow vertical scrolling */
+  height: 100vh; /* Full height for the container */
+}
+
+.section {
+  scroll-snap-align: start; /* Snap sections to the top of the viewport */
+  height: 100vh; /* Each section takes up full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px;
+  text-align: center;
+  background-color: #ffc772;
+}
+
+
 
 .main-content {
   width: 80%;
@@ -20,10 +40,11 @@ html {
   align-items: center;
   /* Center vertically */
   position: relative;
-  background-color: #feeaea;
+
 }
 
 .sidebar {
+  position: relative;
   width: 20%;
   /* Adjust the width as needed */
   height: auto;
@@ -80,15 +101,21 @@ html {
 }
 
 .logo {
-  position: absolute; /* Allows absolute positioning */
-  top: 0; /* Align to the top edge */
-  left: 0; /* Align to the left edge */
-  padding: 5px; /* Optional: Add some spacing from edges */
+  position: absolute;
+  /* Allows absolute positioning */
+  top: 0;
+  /* Align to the top edge */
+  left: 0;
+  /* Align to the left edge */
+  padding: 5px;
+  /* Optional: Add some spacing from edges */
 }
 
 .logo img {
-  width: 150px; /* Set desired width */
-  height: auto; /* Maintain aspect ratio */
+  width: 150px;
+  /* Set desired width */
+  height: auto;
+  /* Maintain aspect ratio */
 }
 
 /* Pokeball */
@@ -168,13 +195,16 @@ html {
   position: absolute;
   width: 18rem;
   height: 0.5rem;
-  background-color: #232323; /* Arrow color */
+  background-color: #232323;
+  /* Arrow color */
   top: calc(10vw + var(--index) * 2.9vw);
   right: 16vh;
   left: 55vw;
   display: inline-block;
-  max-width: 500px; /* Limit the maximum length of the arrow */
-  transition: width 0.3s ease; /* Smooth transition when resizing */
+  max-width: 500px;
+  /* Limit the maximum length of the arrow */
+  transition: width 0.3s ease;
+  /* Smooth transition when resizing */
 }
 
 /* Arrowhead
@@ -192,14 +222,17 @@ html {
 .arrow-button::before {
   content: "";
   position: absolute;
-  left: -60px; /* Extend clickable range to the left */
-  right: -60px; /* Extend clickable range to the right */
+  left: -60px;
+  /* Extend clickable range to the left */
+  right: -60px;
+  /* Extend clickable range to the right */
   top: 0;
   bottom: 0;
-  z-index: -1; /* Keeps it behind the button visually */
+  z-index: -1;
+  /* Keeps it behind the button visually */
 }
 
-.arrow-button  {
+.arrow-button {
   position: absolute;
   top: calc(-0.7vw + var(--index) * 0.01vw);
   right: 30vh;
@@ -233,42 +266,61 @@ html {
 
 .animated-image {
   position: absolute;
-  bottom: 20px; /* Adjust spacing as needed */
-  right: 20px; /* Adjust spacing as needed */
-  width: 420px; /* Set the width of the images */
-  height: 400px; /* Set the height of the images */
+  bottom: 20px;
+  /* Adjust spacing as needed */
+  right: 20px;
+  /* Adjust spacing as needed */
+  width: 420px;
+  /* Set the width of the images */
+  height: 400px;
+  /* Set the height of the images */
   background-size: cover;
   background-repeat: repeat;
   animation: frameAnimation 1s steps(2) infinite;
 }
 
 @keyframes frameAnimation {
-  0% { background-image: url('assets/ani-1.png'); }
-  100% { background-image: url('assets/ani-2.png'); }
+  0% {
+    background-image: url('assets/ani-1.png');
+  }
+
+  100% {
+    background-image: url('assets/ani-2.png');
+  }
 }
 
 .gif-container {
   position: absolute;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  bottom: 10px;
+  /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
 }
 
 .animated-gif {
-  width: 25vw; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 25vw;
+  /* Adjust the size as needed */
+  height: auto;
+  /* Maintain aspect ratio */
 }
 
 .intro-box {
   position: relative;
-  background-color: #fefae0; /* Light background color */
-  border: 15px solid #d97746; /* Border color matching the design */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Space inside the box */
-  margin: 5px ; /* Space outside the box */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  background-color: #fefae0;
+  /* Light background color */
+  border: 15px solid #d97746;
+  /* Border color matching the design */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 10px;
+  /* Space inside the box */
+  margin: 5px;
+  /* Space outside the box */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for depth */
   width: clamp(30px, 50%, 60vw);
   left: 150px;
-  height:auto
+  height: auto;
 }
 
 .intro-box h2 {
@@ -284,7 +336,7 @@ html {
   font-family: Arial, sans-serif;
   line-height: 3vw;
   color: #333;
-  
+
 }
 
 .intro-box ul {
@@ -306,9 +358,9 @@ html {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  max-width: 80%; 
-  margin-bottom: 20px; 
-  
+  max-width: 80%;
+  margin-bottom: 20px;
+
 }
 
 .popup-box {
@@ -316,7 +368,8 @@ html {
   color: black;
   border: 1px solid black;
   padding: 10px;
-  position: absolute; /* Position is set dynamically in JS */
+  position: absolute;
+  /* Position is set dynamically in JS */
   z-index: 1000;
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -344,16 +397,16 @@ main {
 
 section {
   background: white;
-  margin:2rem 0;
+  margin: 2rem 0;
   padding: 1rem;
   border: 1px solid rgb(255, 255, 255);
 }
 
-footer{
+footer {
   text-align: center;
   padding: 2rem;
   background-color: #2b6ca3;
-  color:white;
+  color: white;
 }
 
 svg {
@@ -368,15 +421,18 @@ svg {
   width: 30%;
 }
 
-#view1,#view2,#view3, #view4, #view5 {
+#view1,
+#view2,
+#view3,
+#view4,
+#view5 {
   width: 80%;
   height: 50%;
   max-width: 200px;
 
   position: absolute;
-  top: 1vw; /* Distance from the top */
-  left: 5px; /* Distance from the left */
+  top: 1vw;
+  /* Distance from the top */
+  left: 5px;
+  /* Distance from the left */
 }
-
-
-
