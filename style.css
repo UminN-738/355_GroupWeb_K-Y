@@ -286,20 +286,6 @@ html {
   }
 }
 
-.gif-container {
-  position: absolute;
-  bottom: 10px;
-  /* Adjust as needed */
-  right: 10px;
-  /* Adjust as needed */
-}
-
-.animated-gif {
-  width: 25vw;
-  /* Adjust the size as needed */
-  height: auto;
-  /* Maintain aspect ratio */
-}
 
 .intro-box {
   position: relative;
@@ -358,6 +344,23 @@ html {
   max-width: 80%;
   margin-bottom: 20px;
 
+}
+
+
+.gif-container {
+  position: absolute;
+  bottom: 10px;
+  /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
+}
+
+.animated-gif {
+  width: 25vw;
+  /* Adjust the size as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+  z-index: 1; /* Ensure it appears above the intro box */
 }
 
 .popup-box {
