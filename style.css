@@ -29,8 +29,6 @@ html {
   background-color: #ffc772;
 }
 
-
-
 .main-content {
   width: 80%;
   height: 100vh;
@@ -53,7 +51,6 @@ html {
   /* Orange color */
   padding: 20px;
   box-sizing: border-box;
-  color: white;
   font-family: Arial, sans-serif;
 }
 
